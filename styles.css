@@ -8,7 +8,6 @@ main{
     max-width: 936px;
     margin: 0 auto;
     margin-top: clamp(40px, 9vh, 93px);
-    min-height: 100vh;
 }
 
 h1, h2{
@@ -16,10 +15,10 @@ h1, h2{
     margin-bottom: 32px;
 }
 h1{
-    font-size: 96px;
+    font-size: clamp(48px, 8vw, 96px);
 }
 h2{
-    font-size: 50px;
+    font-size: clamp(24px, 5vw ,50px);
 }
 
 p, a{
@@ -27,34 +26,38 @@ p, a{
 }
 
 p{
-    font-size: 32px;
+    font-size: clamp(16px, 3vw, 32px);
+    line-height: 1.5;
 }
 
 a{
     text-decoration: none;
-    font-size: 24px;
+    font-size: clamp(16px, 2vw + 8px, 24px);
 }
 
 .description{
     color: #bfbfbf;
+    font-size: clamp(15px, 2.5vw, 32px);
 }
 
 .header, .portfolio{
     text-align: center;
-    margin-bottom: 102px;
+    margin-bottom: clamp(35px, 6.5vw + 10px, 102px);
 }
 
 .links{
     display: flex;
     justify-content: center;
-    gap: 75px;
+    gap: clamp(40px, 3.3vw + 27px, 75px);
     font-weight: bold;
     align-items: center;
+    flex-wrap: wrap;
 }
 .link{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .circle{
     display: flex;
@@ -63,21 +66,35 @@ a{
 }
 .blur{
     position: absolute;
-    width: 97px;
-    min-height: 97px;
+    width: clamp(50px, 6.5vw + 25px, 97px);
+    min-height: clamp(50px, 6.5vw + 25px, 97px);
     margin-bottom: 42px;
     background-color: transparent;
     height: auto;
     border: 5px solid #FFBC21;
     border-radius: 50%;
     z-index: 1;
-    box-shadow: 0 0 25px 0px #FFBC21;
+    box-shadow: 0 0 clamp(12.5px, 1.25vw + 7.5px, 25px) 0px #FFBC21;
 }
 .icon{
-    width: 97px;
+    width: clamp(50px, 6.5vw + 25px, 97px);
     height: auto;
     margin-bottom: 42px;
     border: 5px solid #FFBC21;
     border-radius: 50%;
     z-index: 2;
+}
+span{
+    width: max-content;
+    position: absolute;
+    top: 100%;
+}
+.rol{
+    display: inline;
+}
+
+@media (max-width: 434px){
+    .link{
+        width: 100px;
+    }
 }
