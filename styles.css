@@ -1,13 +1,14 @@
 body{
     background-image: radial-gradient(50vw circle, #0a1633 50%, #060e21 100%);
     font-family: Inter;
+    background-attachment: fixed;
 }
 
 main{
     width: 90%;
     max-width: 936px;
-    margin: 0 auto;
-    margin-top: clamp(40px, 9vh, 93px);
+    margin: auto;
+    align-content: center;
 }
 
 h1, h2{
@@ -25,8 +26,8 @@ p, a{
     color:#ffffff;
 }
 
-p{
-    font-size: clamp(16px, 3vw, 32px);
+p, .description{
+    font-size: clamp(15px, 2.5vw, 32px);
     line-height: 1.5;
 }
 
@@ -37,7 +38,6 @@ a{
 
 .description{
     color: #bfbfbf;
-    font-size: clamp(15px, 2.5vw, 32px);
 }
 
 .header, .portfolio{
@@ -89,9 +89,7 @@ span{
     position: absolute;
     top: 100%;
 }
-.rol{
-    display: inline;
-}
+
 
 @media (max-width: 434px){
     .link{
